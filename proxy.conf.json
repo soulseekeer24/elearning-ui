@@ -1,0 +1,7 @@
+{
+  "/": {
+    "target": "https://platzi.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
