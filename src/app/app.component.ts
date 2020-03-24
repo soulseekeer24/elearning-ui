@@ -15,6 +15,21 @@ export class AppComponent implements OnInit {
   constructor(private service: PlatziScrapperService) {
   }
   ngOnInit(): void {
-    this.service.getPlatzi(['web']).subscribe((res: CourseInfo[]) => this.courses = this.courses.concat(res));
+
+  }
+
+  public search(searchString: string) {
+    const tags = searchString.split(/\s+/);
+    if (tags.length > 0) {
+      this.clearComponentData();
+      this.searchCourse(tags);
+    }
+
+  }
+  clearComponentData() {
+    this.courses = [];
+  }
+  searchCourse(tags: string[]) {
+    this.service.getPlatzi(tags).subscribe((res: CourseInfo[]) => this.courses = this.courses.concat(res));
   }
 }
