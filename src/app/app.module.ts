@@ -6,6 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
+
+
+import { CourseCardModule } from './components/course-card/course-card.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,8 +17,11 @@ import { MatInputModule } from '@angular/material/input';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     BrowserAnimationsModule,
+    //material
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+
+    CourseCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

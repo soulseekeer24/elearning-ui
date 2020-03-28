@@ -1,30 +1,30 @@
-<mat-toolbar>
-  <span>My Application</span>
-  <span class="example-spacer"></span>
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Buscar..">
+<mat-toolbar style="display: relative;height: 10%;">
+    <span>My Application</span>
+    <span class="example-spacer"></span>
+
+    <mat-form-field (keydown.enter)="search($event.target.value)" style="width: 40%;">
+        <input matInput placeholder="Buscar..">
     </mat-form-field>
-  </form>
+
 </mat-toolbar>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm" style="background-color: red;">
-      One of three columns
+<div style="display: flex;position: relative; height: 90%;overflow: auto;">
+    <div style="position: relative;width: 15%;height: 70%;">
+
     </div>
-    <div class="col-sm">
-      <ul class="list-unstyled">
-        <li *ngFor="let  course of courses" class="media">
-          <img class="mr-3" [src]="course.imageUrl" alt="Generic placeholder image">
-          <div class="media-body">
-            <h5 class="mt-0 mb-1">{{course.title}}</h5>
-          </div>
-        </li>
-      </ul>
+
+    <div style="position: relative;width: 70%;height: 70%;display: flex;
+    flex-wrap: wrap;">
+
+        <div *ngFor="let c of courses" class="grid-item">
+
+            <app-course-card [course]="c"></app-course-card>
+        </div>
+
     </div>
-    <div class="col-sm" style="background-color: red;">
-      One of three columns
+
+
+    <div style="position: relative;width: 15%;height: 70%;">
+
     </div>
-  </div>
 </div>

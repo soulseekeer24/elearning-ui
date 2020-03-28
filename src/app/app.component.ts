@@ -10,7 +10,9 @@ import { CourseInfo } from './models/course-info';
 export class AppComponent implements OnInit {
   title = 'elearning';
 
-  courses: CourseInfo[] = [];
+  courses: CourseInfo[] = [
+    
+  ];
 
   constructor(private service: PlatziScrapperService) {
   }
