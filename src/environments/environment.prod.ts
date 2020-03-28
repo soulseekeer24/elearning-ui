@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  platziURL: 'https://platzi.com'
+  platziURL: 'https://e-learn-gateway-vkuxmlaokq-uc.a.run.app'
 };
