@@ -1,5 +1,5 @@
 export class CourseInfo {
   title?: string;
-  imageURL?: string;
+  imageUrl?: string;
   url?: string;
 }

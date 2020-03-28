@@ -30,6 +30,10 @@ export class AppComponent implements OnInit {
     this.courses = [];
   }
   searchCourse(tags: string[]) {
-    this.service.getPlatzi(tags).subscribe((res: CourseInfo[]) => this.courses = this.courses.concat(res));
+    this.service.getPlatzi(tags).subscribe((res: { courses: CourseInfo[] }) => {
+      console.log(res);
+      this.courses = this.courses.concat(res.courses);
+      console.log(this.courses);
+    });
   }
 }
