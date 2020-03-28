@@ -1,10 +1,13 @@
-<nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand">Navbar</a>
-  <form (submit)="search(searchBar.value)" action="#" class="form-inline">
-    <input class="form-control mr-sm-2" type="search" #searchBar placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+<mat-toolbar>
+  <span>My Application</span>
+  <span class="example-spacer"></span>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Buscar..">
+    </mat-form-field>
   </form>
-</nav>
+</mat-toolbar>
+
 <div class="container">
   <div class="row">
     <div class="col-sm" style="background-color: red;">
