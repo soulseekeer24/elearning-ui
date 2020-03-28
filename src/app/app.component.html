@@ -7,8 +7,19 @@
     </mat-form-field>
 
 </mat-toolbar>
-<div style="position: relative; height: 40%;width: 100%;background: grey;text-align: center;">
-    <h1 style="color: white;">Esta vale 3kk al dia</h1>
+<div style="position: relative; height: 80%;width: 100%;background: grey;text-align: center;
+background: url(https://image.shutterstock.com/image-vector/data-cloud-storage-elearning-online-260nw-1243806193.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+background-repeat: no-repeat;
+background-size: cover;image-rendering: optimizeQuality;">
+    <h1 style="color: white;">La cima del poder y el conocimiento con expertos en css html, html5 y mucho mas ...</h1>
+    <div style="background: rgba(0, 0, 0, 0.295);padding: 20px;position:absolute;top: 30%;width: 40%;left: 30%;">
+        <mat-form-field (keydown.enter)="search($event.target.value)" style="width:80%;">
+            <input matInput placeholder="Buscar..">
+        </mat-form-field>
+    </div>
+
 </div>
 <div style="display: flex;position: relative; height: 90%;overflow: auto;">
     <div style="position: relative;width: 15%;background-color: lightblue;">
