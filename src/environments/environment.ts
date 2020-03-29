@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  platziURL: 'http://localhost:4200'
+  platziURL: 'http://localhost:4000'
 };
 
 /*

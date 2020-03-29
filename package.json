@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run serve:ssr",
-    "start-local": "ng serve --proxy-config proxy.conf.json",
+    "start-local": "ng serve --proxy-config proxy.conf.json --port 4000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

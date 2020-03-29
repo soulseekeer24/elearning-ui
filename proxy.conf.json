@@ -3,5 +3,10 @@
     "target": "https://e-learn-gateway-vkuxmlaokq-uc.a.run.app",
     "secure": false,
     "changeOrigin": true
+  },
+  "/edx": {
+    "target": "https://e-learn-gateway-vkuxmlaokq-uc.a.run.app",
+    "secure": false,
+    "changeOrigin": true
   }
 }

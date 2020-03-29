@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PlatziScrapperService } from './services/platzi-scrapper.service';
+import { EdxScrapperService } from './services/edx-scrapper.service';
 import { CourseInfo } from './models/course-info';
+import { PlatziScrapperService } from './services/platzi-scrapper.service ';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,10 @@ export class AppComponent implements OnInit {
   title = 'elearning';
 
   courses: CourseInfo[] = [
-    
+
   ];
 
-  constructor(private service: PlatziScrapperService) {
+  constructor(private service: PlatziScrapperService, private edxService: EdxScrapperService) {
   }
   ngOnInit(): void {
 
@@ -33,6 +34,12 @@ export class AppComponent implements OnInit {
   }
   searchCourse(tags: string[]) {
     this.service.getPlatzi(tags).subscribe((res: { courses: CourseInfo[] }) => {
+      console.log(res);
+      this.courses = this.courses.concat(res.courses);
+      console.log(this.courses);
+    });
+
+    this.edxService.getPlatzi(tags).subscribe((res: { courses: CourseInfo[] }) => {
       console.log(res);
       this.courses = this.courses.concat(res.courses);
       console.log(this.courses);
